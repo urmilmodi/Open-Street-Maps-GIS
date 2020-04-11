@@ -11,5 +11,15 @@ Developed in C++ for front and backend. Utilized EZGL library for graphics.
 5) Search menu for intersections
 6) Route calculations for the fastest path to destination
 7) Route instructions
-##Dark Mode
-![] (Demo%20Material/mapper_toronto_darkmode.PNG)
+## Dark Mode
+![](Demo%20Material/mapper_toronto_darkmode.PNG)
+## Building Toggle
+![](Demo%20Material/mapper_toronto_darkmode_buildingstoggle.PNG)
+## Cities
+Any city can be loaded provided the osm.bin file is installed
+### Toronto, Canada
+![](Demo%20Material/mapper_toronto.PNG)
+### London, England
+![](Demo%20Material/mapper_london.PNG)
+### New York, USA
+![](Demo%20Material/mapper_NY.PNG)
