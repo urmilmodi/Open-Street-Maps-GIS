@@ -1,11 +1,28 @@
 # TSPPD-Mapper
 This project utilizes open street maps (**OSM**) to build a geographic information system of different cities across the world. The GIS 
 maps roads, buildings, geographical features, and any particular points of interest ie. restaurants, gas stations.
-## How It Works
-![](Demo%20Material/HowItWorks.gif)
 ## Stack
 Developed in C++ for front and backend. Utilized EZGL library for graphics.
+## How It Works
+![](Demo%20Material/HowItWorks.gif)
+
 ## Notable Algorithms
+### A*, Multi-destination A*, Multi-start A*
+A* calculates the best route for driving (default route mode), Multi-Start/Destination A* is used for the uber pool feature. This feature allows the user to specify how far they are willing to walk to get picked up with a driver. 
+
+The uber pool algorithm utilizes multi-destination A* to find all intersections within a range the user specifies (red) which multi-start A* finds all possible routes from those intersections to the final destination (blue). 
+
+![](Demo%20Material/debug_walk_drive.PNG)
+
+Joining the two routes together forms the best path with the walking portion highlighted in red and the driving route in blue.
+
+![](Demo%20Material/uber_pool.PNG)
+
+#### Performance of A* algorithms
+The algorithms have been tested against thousands of scenarios for legality, performance (time complexity) and the optimality (how well is the calculated path compared to the known best path). The results for the test cases are below.
+
+![](Demo%20Material/m3_results.PNG)
+
 ### R Trees
 R Trees were utilized to spatially organize geographical data to improve responsiveness and reduce FPS lag. Utilizing R Trees enables specific filtering of data to only display and access points that belong on the user's visible screen. 
 
@@ -13,6 +30,7 @@ The GIF on the left illusrates the GIS **before** the R Tree implementation and 
  <img src="Demo%20Material/NoRtreeGif.gif" width="425"/>  <img src="Demo%20Material/RTreeGif.gif" width="425"/>
  
 The improvements range from 100x to 10000x faster depending on how zoomed in the map is, with a higher zoom yielding a larger filter resulting more noticable improvement. 
+
 ![](Demo%20Material/RTreeGraph.PNG)
 
 ## Additional Features
