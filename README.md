@@ -1,4 +1,4 @@
-# TSPPD-Mapper
+# OSM GIS
 This project utilizes open street maps (**OSM**) to build a geographic information system of different cities across the world. The GIS 
 maps roads, buildings, geographical features, and any particular points of interest ie. restaurants, gas stations.
 ## Stack
