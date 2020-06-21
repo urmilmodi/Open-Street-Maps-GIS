@@ -2,7 +2,7 @@
 This project utilizes open street maps (**OSM**) to build a geographic information system of different cities across the world. The GIS 
 maps roads, buildings, geographical features, and any particular points of interest ie. restaurants, gas stations.
 ## Stack
-Developed in C++ for front and backend. Utilized EZGL library for graphics.
+Developed in C++ for front and backend. Utilized a wrapper EZGL library for graphics, built using the GTK library.
 ## How It Works
 ![](Demo%20Material/HowItWorks.gif)
 
